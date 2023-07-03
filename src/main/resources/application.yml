@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: hh-jushuitan
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  profiles:
+    active: dev
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/hhDemo
+#    url: jdbc:mysql://localhost:3306/demo_test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  configuration:
+    #    开启mybatis驼峰匹配
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+    lazy-loading-enabled: true
+    multiple-result-sets-enabled: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+
+server:
+  port: 48888
+  max-http-header-size: 10240
+  servlet:
+    context-path: /
+logging:
+  level:
+    root: info
+
+knife4j:
+  production: true

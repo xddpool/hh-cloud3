@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "constants.signMethodMd5",
+      "type": "java.lang.String",
+      "description": "Description for constants.signMethodMd5."
+  }
+] }
